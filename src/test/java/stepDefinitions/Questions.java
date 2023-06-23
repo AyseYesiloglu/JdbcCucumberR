@@ -3,64 +3,7 @@ package stepDefinitions;
 public class Questions {
 
     /*
-    Search T112
 
-
-
-
-
-T112
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-live
-
-
-live
-
-
-
-
-53
-
-
-Mehmet Ali Sezgin
-  9:20 PM
-https://github.com/ElcinCebeciKinsiz/CucumberJDBC_Elcin
-GitHubGitHub
-GitHub - ElcinCebeciKinsiz/CucumberJDBC_Elcin
-Contribute to ElcinCebeciKinsiz/CucumberJDBC_Elcin development by creating an account on GitHub. (36 kB)
-https://github.com/ElcinCebeciKinsiz/CucumberJDBC_Elcin
-
-
-
-Mehmet Ali Sezgin
-  9:35 PM
-https://github.com/mehmetalisezgin/jdbcTeam112.git
-GitHubGitHub
-GitHub - mehmetalisezgin/jdbcTeam112
-Contribute to mehmetalisezgin/jdbcTeam112 development by creating an account on GitHub. (84 kB)
-https://github.com/mehmetalisezgin/jdbcTeam112.git
-
-New
-
-
-Ibrahim
-  10:42 PM
-@channel
-Soru 1 Database üzerinden appointme.txt
 
 Soru 1: Database üzerinden appointment tablosundaki patient_id = 20 olan hastanin canli muayene isteginin acik oldugunu dogrulayiniz.
 Soru 2: Database üzerinden appointment_payment tablosunda odeme turu olarak "offline" secenl hasta id'lerinin (1,2,3,16,17,18,20,21,24,25,31) oldugunu dogrulayiniz.

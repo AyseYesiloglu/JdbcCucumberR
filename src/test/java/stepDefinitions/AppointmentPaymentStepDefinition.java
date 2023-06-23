@@ -39,4 +39,22 @@ public class AppointmentPaymentStepDefinition {
 
     }
 
+    @Given("Appointment Payment tablosuna query gonderilir ve {string} leri dogrulanir.")
+    public void appointmentPaymentTablosunaQueryGonderilirVeLeriDogrulanir(String id) throws SQLException {
+
+        resultSet=getStatement().executeQuery(manage.getAppointmentPaymentQuery());
+
+        List<Integer> appointmentPaymentList=new ArrayList<>();
+
+        while( resultSet.next()){
+            appointmentPaymentList.add(resultSet.getInt("id") );
+
+        }
+
+        System.out.println(appointmentPaymentList);
+
+        Assert.assertEquals(id,appointmentPaymentList);
+    }
+
+
 }

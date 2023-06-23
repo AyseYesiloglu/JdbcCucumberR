@@ -12,6 +12,8 @@ public class Manage {
     private  String queryAppointmentStatus = "SELECT appointment_status FROM heallife_hospitaltraining.appointment WHERE patient_id = 20";
 
     private String bedTableIsActiveQuery="select is_active from heallife_hospitaltraining.bed where created_at='2021-10-25 03:34:25';";
+
+    private String bedTableNameQuery= "SELECT name FROM heallife_hospitaltraining.bed WHERE bed_group_id = 4 AND is_active = 'no';";
     public String getQuerySabah() {
 
         return querySabah;
@@ -37,5 +39,9 @@ public class Manage {
 
     public String getBedTableIsActiveQuery() {
         return bedTableIsActiveQuery;
+    }
+
+    public String getBedTableNameQuery() {
+        return bedTableNameQuery;
     }
 }
