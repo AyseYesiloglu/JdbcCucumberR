@@ -24,7 +24,9 @@ SELECT name, bed_group_id,is_active FROM heallife_hospitaltraining.bed WHERE nam
 select id,donor_name,date_of_birth,gender, father_name, address from blood_donor where id=7;
 SELECT name, bed_group_id,is_active FROM heallife_hospitaltraining.bed WHERE name=' " +name+ "' "
 #Soru 5: Database üzerinden bed tablosunda bed group id'si 4 ve is_active= "no" olan hastanin name bilgisinin 105 oldugunu dogrulayiniz.
-SELECT donor_name, date_of_birth, gender, father_name, address FROM blood_donor WHERE id = 7;]]></console>
+SELECT donor_name, date_of_birth, gender, father_name, address FROM blood_donor WHERE id = 7;
+select distinct charge_type_id from charge_categories where name like 'P%';
+SELECT guardian_name FROM death_report ORDER BY death_date DESC LIMIT 1;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -34,10 +36,12 @@ SELECT donor_name, date_of_birth, gender, father_name, address FROM blood_donor 
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.charge_categories" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.appointment" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.birth_report" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.bed" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.appointment_payment" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.death_report" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.appoint_priority" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.ambulance_call" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.appointment_queue" active-filter-id="EMPTY_FILTER" />
