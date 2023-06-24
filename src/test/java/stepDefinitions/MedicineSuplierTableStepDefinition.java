@@ -14,9 +14,9 @@ import java.util.List;
 public class MedicineSuplierTableStepDefinition {
     ResultSet resultSet;
     Timestamp timestamp;
-    List<Object> actualList = new ArrayList<>();
+    List<Object> actualList;
     List<Object> expectedList;
-    List<Object>resultsetList;
+
 
     @Then("query is created according to given adress is {string}")
     public void query_is_created_according_to_given_adress_is(String address) throws SQLException {
@@ -33,8 +33,8 @@ public class MedicineSuplierTableStepDefinition {
             String supplierDrugLicence = resultSet.getString("supplier_drug_licence");
             String address1 = resultSet.getString("address");
             Timestamp timestamp1= resultSet.getTimestamp("created_at");
-            resultsetList=new ArrayList<>(Arrays.asList(id,supplier,contact,supplierPerson,supplierPersonContact,supplierDrugLicence,address1,timestamp1));
-            actualList.add(resultsetList);
+            actualList=new ArrayList<>(Arrays.asList(id,supplier,contact,supplierPerson,supplierPersonContact,supplierDrugLicence,address1,timestamp1));
+
         }
         System.out.println(actualList);
         timestamp = Timestamp.valueOf("2021-10-25 03:09:11");
@@ -45,7 +45,8 @@ public class MedicineSuplierTableStepDefinition {
     }
     @Then("the query result should be match based on knowledge")
     public void the_query_result_should_be_match_based_on_knowledge() {
-        Assert.assertTrue(actualList.contains(expectedList));
+      //  Assert.assertTrue(actualList.contains(expectedList));
+        Assert.assertEquals(expectedList,actualList);
 
     }
 

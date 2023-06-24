@@ -33,14 +33,17 @@ SELECT sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS total_hours FROM doctor
 #Database üzerinden medicine_supplier tablosundaki address bilgisi "Andheri, Mumbai"
   olan verinin diger bilgilerinin dogru oldugunu kontrol ediniz.
   select * from heallife_hospitaltraining.medicine_supplier where address='Andheri, Mumbai';
-  #id /supplier/contact/supplier_person/supplier_person_contact/supplier_drug_licence/address/created_at]]></console>
+  #id /supplier/contact/supplier_person/supplier_person_contact/supplier_drug_licence/address/created_at
+  Select account_title from staff where qualification='MS' and specialization= 'Neurology' order by account_title;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="01e37368-7127-408e-b063-4647bb740b2d" object-ref="schemas/heallife_hospitaltraining/tables/staff" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.dose_duration" active-filter-id="EMPTY_FILTER" />
@@ -50,6 +53,7 @@ SELECT sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS total_hours FROM doctor
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.bed" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.appointment_payment" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.death_report" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.staff" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.doctor_global_shift" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.ambulance_call" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.appointment_queue" active-filter-id="EMPTY_FILTER" />
