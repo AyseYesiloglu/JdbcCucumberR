@@ -11,6 +11,8 @@ public class Manage {
     private String bedTableNameQuery = "SELECT name FROM heallife_hospitaltraining.bed WHERE bed_group_id = 4 AND is_active = 'no';";
     private String deathReportFromLastDateQuery="SELECT guardian_name FROM death_report ORDER BY death_date DESC LIMIT 1;";
     private String dischargeCardCreatedAtQuery="select created_at from discharge_card where opd_details_id >11 and opd_details_id<31;";
+    private String vehicleTableAccordManufactureAtQuery="SELECT vehicle_model FROM vehicles ORDER BY manufacture_year ASC";
+    private String vehicleTableAccordCreateAtQuery="SELECT  vehicle_model FROM vehicles ORDER BY created_at ASC";
     public String getQuerySabah() {
         return querySabah;
     }
@@ -38,5 +40,13 @@ public class Manage {
 
     public String getDischargeCardCreatedAtQuery() {
         return dischargeCardCreatedAtQuery;
+    }
+
+    public String getVehicleTableAccordManufactureAtQuery() {
+        return vehicleTableAccordManufactureAtQuery;
+    }
+
+    public String getVehicleTableAccordCreateAtQuery() {
+        return vehicleTableAccordCreateAtQuery;
     }
 }

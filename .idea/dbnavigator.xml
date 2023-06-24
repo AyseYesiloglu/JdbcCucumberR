@@ -34,16 +34,21 @@ SELECT sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS total_hours FROM doctor
   olan verinin diger bilgilerinin dogru oldugunu kontrol ediniz.
   select * from heallife_hospitaltraining.medicine_supplier where address='Andheri, Mumbai';
   #id /supplier/contact/supplier_person/supplier_person_contact/supplier_drug_licence/address/created_at
-  Select account_title from staff where qualification='MS' and specialization= 'Neurology' order by account_title;]]></console>
+  Select account_title from staff where qualification='MS' and specialization= 'Neurology' order by account_title;
+  SELECT m1.vehicle_name FROM (SELECT vehicle_name, ROW_NUMBER() OVER (ORDER BY manufacture_year ASC) AS row_number FROM vehicles) AS m1 INNER JOIN (SELECT vehicle_name, ROW_NUMBER() OVER (ORDER BY created_at ASC) AS row_number FROM vehicles) AS m2 ON m1.row_number = m2.row_number;
+  select vehicle_model from vehicles order by created_at asc;
+  select vehicle_model from vehicles order by manufacture_year asc;
+  #Database üzerinden vehicles tablosundaki araclarin manufacture_year bilgisine göre en eskiden yeniye
+  listelendiginde ve created_at bilgisine görede eskiden yeniye siralanip listelendiginde iki listede de ayni indexte
+  yer alan arac oldugunu dogrulayiniz.
+  select vehicle_model  from vehicles order by created_at and manufacture_year asc;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="01e37368-7127-408e-b063-4647bb740b2d" object-ref="schemas/heallife_hospitaltraining/tables/staff" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.dose_duration" active-filter-id="EMPTY_FILTER" />
@@ -55,6 +60,7 @@ SELECT sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS total_hours FROM doctor
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.death_report" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.staff" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.doctor_global_shift" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.vehicles" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.ambulance_call" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.appointment_queue" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="01e37368-7127-408e-b063-4647bb740b2d" dataset="heallife_hospitaltraining.medicine_supplier" active-filter-id="EMPTY_FILTER" />
@@ -69,6 +75,9 @@ SELECT sum(TIMESTAMPDIFF(HOUR, start_time, end_time)) AS total_hours FROM doctor
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces />
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>

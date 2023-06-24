@@ -4,11 +4,11 @@ Feature: Q14
   account_title verilerini harf sirasina göre siralayarak listeyiniz.
     #Select account_title from staff where qualification='MS' and specialization= 'Neurology' order by account_title;
     Given Create connection
-    Then Create a query that alphabetically sorts the "<account_titles>" of those whose qualification is "MS" and specialization is "Neurology"
-    And the query result should be match based on staff table query
+    Then Create a query that alphabetically sorts the "account_title" of those whose qualification is "MS" and specialization is "Neurology"
+    And the query result should be match based on "<account_title>" staff table query
     Then close the connection
     Examples:
-      | account_titles        |
+      | account_title        |
       | abdullah.ak           |
       | abdullah.ak           |
       | abdullah.ak           |

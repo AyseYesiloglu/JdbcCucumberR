@@ -14,7 +14,7 @@ import java.util.List;
 public class MedicineSuplierTableStepDefinition {
     ResultSet resultSet;
     Timestamp timestamp;
-    List<Object> actualList;
+    List<Object> actualList=new ArrayList<>();
     List<Object> expectedList;
 
 
@@ -25,15 +25,17 @@ public class MedicineSuplierTableStepDefinition {
 
         while (resultSet.next()) {
             //id /supplier/contact/supplier_person/supplier_person_contact/supplier_drug_licence/address/created_at
-            int id = resultSet.getInt("id");
-            String supplier = resultSet.getString("supplier");
-            String contact = resultSet.getString("contact");
-            String supplierPerson = resultSet.getString("supplier_person");
-            String supplierPersonContact = resultSet.getString("supplier_person_contact");
-            String supplierDrugLicence = resultSet.getString("supplier_drug_licence");
-            String address1 = resultSet.getString("address");
-            Timestamp timestamp1= resultSet.getTimestamp("created_at");
-            actualList=new ArrayList<>(Arrays.asList(id,supplier,contact,supplierPerson,supplierPersonContact,supplierDrugLicence,address1,timestamp1));
+           int id = resultSet.getInt("id");
+           String supplier = resultSet.getString("supplier");
+           String contact = resultSet.getString("contact");
+           String supplierPerson = resultSet.getString("supplier_person");
+           String supplierPersonContact = resultSet.getString("supplier_person_contact");
+           String supplierDrugLicence = resultSet.getString("supplier_drug_licence");
+           String address1 = resultSet.getString("address");
+           Timestamp timestamp1= resultSet.getTimestamp("created_at");
+           actualList=new ArrayList<>(Arrays.asList(id,supplier,contact,supplierPerson,supplierPersonContact,supplierDrugLicence,address1,timestamp1));
+
+            //actualList.add(resultSet.getInt("id")+","+resultSet.getString("supplier")+","+resultSet.getString("contact")+","+resultSet.getString("supplier_person")+","+resultSet.getString("supplier_person_contact")+","+resultSet.getString("supplier_drug_licence")+","+resultSet.getString("address")+","+resultSet.getTimestamp("created_at"));
 
         }
         System.out.println(actualList);
