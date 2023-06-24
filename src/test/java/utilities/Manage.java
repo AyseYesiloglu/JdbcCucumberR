@@ -10,6 +10,7 @@ public class Manage {
     private String bedTableIsActiveQuery = "select is_active from heallife_hospitaltraining.bed where created_at='2021-10-25 03:34:25';";
     private String bedTableNameQuery = "SELECT name FROM heallife_hospitaltraining.bed WHERE bed_group_id = 4 AND is_active = 'no';";
     private String deathReportFromLastDateQuery="SELECT guardian_name FROM death_report ORDER BY death_date DESC LIMIT 1;";
+    private String dischargeCardCreatedAtQuery="select created_at from discharge_card where opd_details_id >11 and opd_details_id<31;";
     public String getQuerySabah() {
         return querySabah;
     }
@@ -33,5 +34,9 @@ public class Manage {
     }
     public String getDeathReportFromLastDateQuery() {
         return deathReportFromLastDateQuery;
+    }
+
+    public String getDischargeCardCreatedAtQuery() {
+        return dischargeCardCreatedAtQuery;
     }
 }
