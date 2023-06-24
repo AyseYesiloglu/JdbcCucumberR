@@ -16,7 +16,6 @@ public class DischargeCardTableStepDefinition {
     Timestamp timestamp;
     Timestamp timestamp1;
     Timestamp timestamp2;
-
     ResultSet resultSet;
     Manage manage = new Manage();
     List<Object> actualCreatedAtList = new ArrayList<>();
@@ -38,6 +37,8 @@ public class DischargeCardTableStepDefinition {
         List<Object> expectedCreatedAtList = new ArrayList<>(Arrays.asList(timestamp1,timestamp2));
         System.out.println(expectedCreatedAtList);
         Assert.assertEquals(expectedCreatedAtList,actualCreatedAtList);
+
+
     }
 
 
